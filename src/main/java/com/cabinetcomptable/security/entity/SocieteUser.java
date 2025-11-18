@@ -1,9 +1,6 @@
 package com.cabinetcomptable.security.entity;
 
-import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -17,6 +14,7 @@ import lombok.experimental.SuperBuilder;
 public class SocieteUser extends User {
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "societe_id")
     private Company linkedCompany;
 
 }

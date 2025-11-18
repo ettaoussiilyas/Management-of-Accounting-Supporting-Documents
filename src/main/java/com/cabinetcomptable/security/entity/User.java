@@ -24,10 +24,8 @@ public abstract class User {
     @Column(unique = true)
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     private String password;
-
-    private String role;
 
     @Column(name = "full_name", unique = true)
     private String fullName;
@@ -36,4 +34,9 @@ public abstract class User {
 
     @Column(name = "creation_date")
     private LocalDate creationDate;
+
+    @PrePersist
+    protected void onCreate(){
+        creationDate = LocalDate.now();
+    }
 }

@@ -7,10 +7,10 @@ import lombok.experimental.SuperBuilder;
 
 @Entity
 @DiscriminatorValue("ACCOUNTANT")
-//@Getter
-//@Setter
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@SuperBuilder maybe we need them in future if we add new attributes
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
 public class AccountantUser extends User{
 }

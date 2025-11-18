@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import lombok.*;
 
+import java.util.List;
+
 @Entity(name = "company")
 @Data
 @NoArgsConstructor
@@ -13,6 +15,9 @@ public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "sociale_raison")
+    private String socialeRaison;
 
     private String ice;
 
@@ -24,4 +29,6 @@ public class Company {
     @Column(unique = true)
     private String email;
 
+    @OneToMany(mappedBy = "linkedCompany", cascade = CascadeType.ALL)
+    private List<SocieteUser> employees;
 }
