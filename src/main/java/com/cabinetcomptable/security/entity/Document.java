@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Entity(name = "doucument")
+@Entity(name = "document")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,21 +23,21 @@ public class Document {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "doucument_number")
-    private String doucumentNumber;
+    @Column(name = "document_number")
+    private String documentNumber;
 
     private DocumentType type;
 
     private String category;
 
-    @Column(name = "doucument_date")
-    private LocalDate doucumentDate;
+    @Column(name = "document_date")
+    private LocalDate documentDate;
 
     private Double cost;
 
     private String supplier;
 
-    private String doucument;
+    private String document;
 
     private DocumentStatus status;
 
