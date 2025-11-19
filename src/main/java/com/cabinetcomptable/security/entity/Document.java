@@ -3,8 +3,6 @@ package com.cabinetcomptable.security.entity;
 import com.cabinetcomptable.security.entity.enums.DocumentStatus;
 import com.cabinetcomptable.security.entity.enums.DocumentType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +10,8 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Entity(name = "document")
+@Entity
+@Table(name = "document")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,6 +25,7 @@ public class Document {
     @Column(name = "document_number")
     private String documentNumber;
 
+    @Enumerated(EnumType.STRING)
     private DocumentType type;
 
     private String category;
@@ -39,6 +39,7 @@ public class Document {
 
     private String document;
 
+    @Enumerated(EnumType.STRING)
     private DocumentStatus status;
 
     @Column(name = "validation_date")
@@ -60,7 +61,7 @@ public class Document {
     @PrePersist
     protected void onCreate(){
         creationDate = LocalDate.now();
-        if (this instanceof Document) modificationDate = LocalDate.now();
+        modificationDate = LocalDate.now();
     }
 
     @PreUpdate

@@ -9,12 +9,10 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @SuperBuilder
 public class SocieteUser extends User {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "societe_id")
     private Company linkedCompany;
-
 }

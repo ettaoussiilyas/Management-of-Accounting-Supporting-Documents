@@ -1,12 +1,12 @@
 package com.cabinetcomptable.security.entity;
 
 import jakarta.persistence.*;
-
 import lombok.*;
 
 import java.util.List;
 
-@Entity(name = "company")
+@Entity
+@Table(name = "company")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,6 +29,6 @@ public class Company {
     @Column(unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "linkedCompany", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "linkedCompany", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<SocieteUser> employees;
 }

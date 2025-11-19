@@ -10,7 +10,6 @@ import java.util.List;
 @Mapper(componentModel = "spring", uses = {CompanyMapper.class})
 public interface DocumentMapper {
 
-    @Mapping(target = "documentPath", source = "document")
     DocumentResponseDTO toResponseDTO(Document document);
 
     @Mapping(target = "id", ignore = true)
@@ -18,7 +17,7 @@ public interface DocumentMapper {
     @Mapping(target = "creationDate", ignore = true)
     @Mapping(target = "modificationDate", ignore = true)
     @Mapping(target = "validationDate", ignore = true)
-    @Mapping(target = "company", ignore = true) // Géré manuellement dans le service
+    @Mapping(target = "company", ignore = true)
     Document toEntity(DocumentRequestDTO dto);
 
     List<DocumentResponseDTO> toResponseDTOList(List<Document> documents);

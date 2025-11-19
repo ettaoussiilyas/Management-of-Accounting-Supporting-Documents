@@ -1,15 +1,14 @@
 package com.cabinetcomptable.security.mapper;
 
-
 import com.cabinetcomptable.security.dto.company.CompanyRequestDTO;
 import com.cabinetcomptable.security.dto.company.CompanyResponseDTO;
 import com.cabinetcomptable.security.dto.company.CompanySimpleDTO;
 import com.cabinetcomptable.security.entity.Company;
 import org.mapstruct.*;
 
-        import java.util.List;
+import java.util.List;
 
-@Mapper(componentModel = "spring", uses = {UserMapper.class})
+@Mapper(componentModel = "spring")
 public interface CompanyMapper {
 
     CompanyResponseDTO toResponseDTO(Company company);
