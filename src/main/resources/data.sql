@@ -13,14 +13,14 @@ VALUES
 -- COMPTABLE (Accountant)
 INSERT INTO users (id, email, password, role, full_name, status, creation_date)
 VALUES
-    (1, 'comptable@alaman.ma', '$2a$10$N9qo8uLOickgx2ZMRZoMye.KdwjB1.EB6a2WcY4nHtGp4p2E2Wz7a', 'ACCOUNTANT', 'Ahmed Benali', 'ACTIVE', '2024-01-15');
+    (1, 'comptable@alaman.ma', '$2a$12$pOoA14QKXrUZmmfBqRrjH.xWaOqM16oOlhNTvbtIdTUd7pLaTzFtG', 'ACCOUNTANT', 'Ahmed Benali', 'ACTIVE', '2024-01-15');
 
 -- SOCIETE USERS (Utilisateurs Société)
 INSERT INTO users (id, email, password, role, full_name, status, creation_date, societe_id)
 VALUES
-    (2, 'karim@alamanconsulting.ma', '$2a$10$N9qo8uLOickgx2ZMRZoMye.KdwjB1.EB6a2WcY4nHtGp4p2E2Wz7a', 'SOCIETE', 'Karim El Fassi', 'ACTIVE', '2024-01-15', 1),
-    (3, 'fatima@techmaroc.ma', '$2a$10$N9qo8uLOickgx2ZMRZoMye.KdwjB1.EB6a2WcY4nHtGp4p2E2Wz7a', 'SOCIETE', 'Fatima Zahra Alaoui', 'ACTIVE', '2024-01-16', 2),
-    (4, 'mohamed@distributionplus.ma', '$2a$10$N9qo8uLOickgx2ZMRZoMye.KdwjB1.EB6a2WcY4nHtGp4p2E2Wz7a', 'SOCIETE', 'Mohamed Amine Berrada', 'ACTIVE', '2024-01-17', 3);
+    (2, 'karim@alamanconsulting.ma', '$2a$12$pOoA14QKXrUZmmfBqRrjH.xWaOqM16oOlhNTvbtIdTUd7pLaTzFtG', 'SOCIETE', 'Karim El Fassi', 'ACTIVE', '2024-01-15', 1),
+    (3, 'fatima@techmaroc.ma', '$2a$12$pOoA14QKXrUZmmfBqRrjH.xWaOqM16oOlhNTvbtIdTUd7pLaTzFtG', 'SOCIETE', 'Fatima Zahra Alaoui', 'ACTIVE', '2024-01-16', 2),
+    (4, 'mohamed@distributionplus.ma', '$2a$12$pOoA14QKXrUZmmfBqRrjH.xWaOqM16oOlhNTvbtIdTUd7pLaTzFtG', 'SOCIETE', 'Mohamed Amine Berrada', 'ACTIVE', '2024-01-17', 3);
 
 -- ===============================
 -- DOCUMENTS (Documents)
