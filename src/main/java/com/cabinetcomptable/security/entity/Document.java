@@ -37,7 +37,14 @@ public class Document {
 
     private String supplier;
 
+    // original filename or local path
     private String document;
+
+    // Cloudinary public id
+    private String publicId;
+
+    // Cloudinary secure URL
+    private String documentUrl;
 
     @Enumerated(EnumType.STRING)
     private DocumentStatus status;
