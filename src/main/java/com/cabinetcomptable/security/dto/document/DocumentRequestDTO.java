@@ -13,6 +13,5 @@ public class DocumentRequestDTO {
     private LocalDate documentDate;
     private Double cost;
     private String supplier;
-    private String document;
     private String comment;
 }

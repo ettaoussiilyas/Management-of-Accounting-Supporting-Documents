@@ -16,7 +16,9 @@ public class DocumentResponseDTO {
     private LocalDate documentDate;
     private Double cost;
     private String supplier;
-    private String document;
+    private String document; // original filename
+    private String publicId;
+    private String documentUrl;
     private DocumentStatus status;
     private LocalDate validationDate;
     private String comment;
